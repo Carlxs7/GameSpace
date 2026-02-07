@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space Defender — Jogo no Navegador</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="game-wrapper">
+    <header class="game-header">
+      <h1>DevCarlxs</h1>
+      <div class="hud">
+        <span class="score">Pontos: <strong id="score">0</strong></span>
+        <span class="lives">Vidas: <strong id="lives">3</strong></span>
+      </div>
+    </header>
+
+    <main class="game-area">
+      <canvas id="gameCanvas" width="800" height="500"></canvas>
+
+      <div id="startScreen" class="overlay">
+        <h2>Space Defender</h2>
+        <p>Use <kbd>←</kbd> <kbd>→</kbd> ou <kbd>A</kbd> <kbd>D</kbd> para mover</p>
+        <p><kbd>Espaço</kbd> para atirar</p>
+        <button id="startBtn" class="btn">Iniciar Jogo</button>
+      </div>
+
+      <div id="gameOverScreen" class="overlay hidden">
+        <h2>Game Over</h2>
+        <p>Sua pontuação: <strong id="finalScore">0</strong></p>
+        <button id="restartBtn" class="btn">Jogar de novo</button>
+      </div>
+    </main>
+
+    <footer class="game-footer">
+      <p>Criado por DevCarlxs • Divirta-se!</p>
+    </footer>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
